@@ -1,0 +1,18 @@
+Pet Details Project:
+Backends:
+User Authentication - SignUp/Login
+Crud for Pets:
+- Add a pet
+- View List of pets
+- Edit Pets Details
+- Delete Pet
+3) API Endpoints(REST)
+FrontEnd:
+Login/SignUp Page
+Dashboard - Pet List
+Add/Edit Form
+Delete Pet Button
+Database:
+Create User Table
+Create Pet
+Create Pet Details
