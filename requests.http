@@ -1,0 +1,63 @@
+### VS Code REST Client sample requests
+# Install "REST Client" extension, open this file, and click "Send Request" above lines.
+
+@base=http://localhost:3000/api
+@contentType=application/json
+
+### Health
+GET {{base}}/health
+
+### Sign up
+POST {{base}}/auth/signup
+Content-Type: {{contentType}}
+
+{
+  "name": "Alice",
+  "email": "alice@example.com",
+  "password": "secret123"
+}
+
+### Login
+# Copy the token value from the response and set it below as Authorization header
+POST {{base}}/auth/login
+Content-Type: {{contentType}}
+
+{
+  "email": "alice@example.com",
+  "password": "secret123"
+}
+
+### Set auth token here (replace <token>)
+@auth=Bearer <token>
+
+### List pets
+GET {{base}}/pets
+Authorization: {{auth}}
+
+### Create pet
+POST {{base}}/pets
+Authorization: {{auth}}
+Content-Type: {{contentType}}
+
+{
+  "name": "Fluffy",
+  "type": "Cat",
+  "age": 3
+}
+
+### Get one
+GET {{base}}/pets/1
+Authorization: {{auth}}
+
+### Update
+PUT {{base}}/pets/1
+Authorization: {{auth}}
+Content-Type: {{contentType}}
+
+{
+  "age": 4
+}
+
+### Delete
+DELETE {{base}}/pets/1
+Authorization: {{auth}}
