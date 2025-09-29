@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Manager</title>
+    <!-- Tailwind CDN (dev-only) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                600: '#4f46e5',
+                700: '#4338ca'
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <!-- React UMD -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <style>
+      html, body, #root { height: 100%; }
+    </style>
+  </head>
+  <body class="bg-zinc-900 text-zinc-100 min-h-screen">
+    <div id="root" class="h-full"></div>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
